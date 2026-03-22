@@ -1,11 +1,16 @@
 import os
 import sys
-from src.exception import CustomerException
+from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+
+from src.components.datatransformation import DataTransformation
+from src.components.datatransformation import DataTransformationConfig
+
+
 
 @dataclass
 class DataIngestionConfig:
@@ -41,8 +46,8 @@ class DataIngestion:
             )
 
         except Exception as e:
-            raise CustomerException(e, sys)
-        
+            raise CustomException(e, sys)
+
 if __name__ == "__main__":
     obj = DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data, test_data = obj.initiate_data_ingestion()
