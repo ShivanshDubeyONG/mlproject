@@ -2,6 +2,12 @@
 
 A Flask-based Machine Learning web application that predicts a student's math score based on demographic and academic information.
 
+
+## 🚀 Live Demo
+
+👉 https://studentperformance-1voo.onrender.com
+
+
 ## 🚀 Tech Stack
 
 - Python
